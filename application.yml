@@ -1,0 +1,24 @@
+#默认配置环境 启动配置项
+spring:
+  profiles:
+    active: dev
+
+---
+#开发环境（开发环境）
+server:
+  port: 8001
+
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-bigeyes-dev
+
+---
+#开发环境（测试环境）
+server:
+  port: 8001
+
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-bigeyes-test
