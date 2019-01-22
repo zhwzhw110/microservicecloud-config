@@ -1,0 +1,34 @@
+#默认配置环境 启动配置项
+spring:
+  profiles:
+    active: dev
+
+---
+#开发环境（开发环境）
+server:
+  port: 8201
+
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://erueka7001.com:7001/eureka/,http://erueka7002.com:7002/eureka/,http://erueka7003.com:7003/eureka/
+      defaultZone: http://erueka7001.com:7001/eureka/
+                         
+---
+#开发环境（测试环境）
+server:
+  port: 8202
+
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://erueka7001.com:7001/eureka/,http://erueka7002.com:7002/eureka/,http://erueka7003.com:7003/eureka/
+      defaultZone: http://erueka7001.com:7001/eureka/
